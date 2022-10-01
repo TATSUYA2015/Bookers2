@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Bookers2</title>
+    <script src="https://kit.fontawesome.com/b321d4f91c.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,18 +13,31 @@
 
   <body>
     <heder>
-     <% if user_signed_in? %>
-      <li>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      </li>
-     <% else %>
-      <li>
-        <%= link_to "新規登録", new_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to "ログイン", new_user_session_path %>
-      </li>
-     <% end %>
+      <nev class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="https://8bb7718164df4d5f84efdb5027e9478f.vfs.cloud9.ap-northeast-1.amazonaws.com">
+            <span>Bookers</span>
+          </a>
+         <% if user_signed_in? %>
+         <li>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+         </li>
+         <% else %>
+         <li>
+          <a href="https://8bb7718164df4d5f84efdb5027e9478f.vfs.cloud9.ap-northeast-1.amazonaws.com">Home</a>
+         </li>
+         <li>
+          <%= link_to "About", about_path %>
+         </li>
+         <li>
+          <%= link_to "sign up", new_user_registration_path %>
+         </li>
+         <li>
+          <%= link_to "log in", new_user_session_path %>
+         </li>
+         <% end %>
+        </div>
+      </nev>
     </heder>
     <%= yield %>
   </body>
