@@ -1,24 +1,21 @@
 
 <div class="container px-5 px-sm-0">
     <div class="row">
-         <%= render'book', book: @books, user: @user %>
-
+         <%= render'book', book: @book_new, user: @user %>
          <div class="col-md-8 offset-md-1">
            <h2>Book detail</h2>
            <table class="table">
             <tbody>
              <tr>
-             
-             <tb><%= @book.user.name %></tb>
-             <tb><%= @book.title %></tb>
-             <td><%= @book.body %></td>
-             <tb>#Edit</tb>
-             <tb>#Destroy</tb>
+              <td><%= image_tag @user.get_profile_image(100,100) %></td>
+              <td><%= @book.title %></td>
+              <td><%= @book.body %></td>
+              <td>edit</td>
+              <td>destroy</td>
              </tr>
-             </tbody>
-            </table>
-
-        </div>
+            </tbody>
+           </table>
+         </div>
     </div>
 </div>
 
