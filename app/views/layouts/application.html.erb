@@ -19,9 +19,26 @@
           <a class="navbar-brand" href="https://8bb7718164df4d5f84efdb5027e9478f.vfs.cloud9.ap-northeast-1.amazonaws.com">
             <span>Bookers</span>
           </a>
+
+
+
          <% if user_signed_in? %>
+          <li>
+          <%= link_to books_path do %>
+          <i class="fa-solid fa-house"></i>Home
+          <% end %>
+         </li>
          <li>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          <i class="fa-solid fa-users"></i>User
+         </li>
+         <li>
+          <i class="fa-solid fa-book-open"></i>Books
+          <i class="fa-solid fa-book-open"></i>Books
+         </li>
+         <li>
+          <%= link_to destroy_user_session_path do %>
+          <i class="fa-solid fa-right-from-bracket"></i>Log out
+          <% end %>
          </li>
          <% else %>
          <li>
