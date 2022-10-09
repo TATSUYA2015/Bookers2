@@ -24,41 +24,43 @@
 
          <% if user_signed_in? %>
           <li>
-          <%= link_to books_path do %>
-          <i class="fa-solid fa-house"></i>Home
-          <% end %>
-         </li>
-         <li>
-          <i class="fa-solid fa-users"></i>User
-         </li>
-         <li>
+            <%= link_to books_path do %>
+            <i class="fa-solid fa-house"></i>Home
+            <% end %>
+          </li>
+          <li>
+            <%= link_to users_path do %>
+            <i class="fa-solid fa-users"></i>User
+            <% end %>
+          </li>
+          <li>
           <i class="fa-solid fa-book-open"></i>Books
-         </li>
-         <li>
+          </li>
+          <li>
            <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-         </li>
-         <% else %>
-         <li>
+          </li>
+          <% else %>
+          <li>
            <%= link_to books_path do %>
            <i class="fa-solid fa-house"></i>Home
            <% end %>
-         </li>
-         <li>
+          </li>
+          <li>
            <%= link_to about_path do %>
            <i class="fa-solid fa-link"></i>About
            <% end %>
-         </li>
-         <li>
+          </li>
+          <li>
         　<%= link_to new_user_registration_path do %>
           <i class="fa-solid fa-right-to-bracket"></i>Sign up
           <% end %>
-         </li>
-         <li>
+          </li>
+          <li>
           <%= link_to new_user_session_path do %>
           <i class="fa-solid fa-user-plus"></i>Log in
           <% end %>
-         </li>
-         <% end %>
+          </li>
+          <% end %>
         </div>
       </nev>
     </heder>
