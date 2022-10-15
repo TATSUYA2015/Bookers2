@@ -25,6 +25,7 @@ class BooksController < ApplicationController
 
   def show
     @book_new=Book.new
+    @books=Book.all
     @book=Book.find(params[:id])
     @user=@book.user
   end
